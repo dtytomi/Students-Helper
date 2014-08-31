@@ -1,0 +1,25 @@
+<div class="page-header">
+	<h1>Student List</h1>
+</div>
+<div class="row">
+	<div class="col-xs-5">
+		<a href="#/new" class="btn btn-default"><span class="gly glyphicon-plus"> Add a Student</span></a>
+	</div>
+	<div class="col-xs-7">
+		<input type="text" class="form-control" ng-model="query" placeholder="Search for a Helper">
+	</div>
+</div>
+<div class="row">
+	<div class="col-sx-12">
+		<hr>
+	</div>
+</div>
+<div class="list-group">
+	<div ng-repeat="student in students | orderBy:  reverse " class="list-group-item">
+		<p class="list-group-item-text" data-ng-bind="student.name"></p>
+		<p class="list-group-item-text" data-ng-bind="student.level"></p>
+		<p class="list-group-item-text" data-ng-bind="student.course"></p>
+		<p class="list-group-item-text" data-ng-bind="student.email"></p>
+		<p class="list-group-item-text" data-ng-bind="student.grade"></p>
+	</div>
+</div>
